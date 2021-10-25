@@ -1,5 +1,6 @@
 [
   {
+    "id": 1,
     "huisdier": "Kat",
     "oogkleur": "Bruin",
     "windrichting": "Oost",
@@ -33,7 +34,7 @@
   },
   {
     "huisdier": "Hond",
-    "oogkleur": "groen",
+    "oogkleur": "Groen",
     "windrichting": "West",
     "zinSchaal": 7,
     "eigenKeuze": "Misschien",
@@ -43,7 +44,7 @@
     "kledingKleur": "Zwart, Wit, Grijs",
     "verdiepingTTH": 2,
     "beroep": "Front-end developer",
-    "beroepJong": "dierenverzorger",
+    "beroepJong": "Dierenverzorger",
     "kaasZoogdier": 3.14,
     "autoMerk": "Acura"
   },
@@ -57,7 +58,7 @@
     "favoDatumText": "tien juli negentiennegenennegentig",
     "zuivelproduct": "Ik ben lactose intolerant, ga weg!",
     "kledingKleur": "Zwart, Wit, Grijs",
-    "verdiepingTTH": "geen",
+    "verdiepingTTH": null,
     "beroep": "Vader",
     "beroepJong": "President",
     "kaasZoogdier": "Kan ik nog switchen naar de Visual Track?",
@@ -121,7 +122,7 @@
     "favoDatumText": "twintig juli tweeduizendnegentien",
     "zuivelproduct": "Melk",
     "kledingKleur": "Blauw, Zwart, Wit",
-    "verdiepingTTH": "geen",
+    "verdiepingTTH": null,
     "beroep": "Rijk",
     "beroepJong": "Dierenarts",
     "kaasZoogdier": "Wat.",
@@ -260,7 +261,7 @@
     "oogkleur": "Blauw",
     "windrichting": "Oost",
     "zinSchaal": 8,
-    "eigenKeuze": "",
+    "eigenKeuze": null,
     "favoDatumDate": "20/04/1889",
     "favoDatumText": "twintig April achtiennegentachtig",
     "zuivelproduct": "Ei",
@@ -308,7 +309,7 @@
     "oogkleur": "Blauw",
     "windrichting": "Oost",
     "zinSchaal": 7,
-    "eigenKeuze": "",
+    "eigenKeuze": null,
     "favoDatumDate": "05/06/2020",
     "favoDatumText": "vijf juni tweeduizendtwintig",
     "zuivelproduct": "Ei",
@@ -378,10 +379,10 @@
     "zuivelproduct": "Kaas",
     "kledingKleur": "Blauw, Wit",
     "verdiepingTTH": "niet",
-    "beroep": "",
-    "beroepJong": "",
+    "beroep": null,
+    "beroepJong": null,
     "kaasZoogdier": "Wat.",
-    "autoMerk": ""
+    "autoMerk": null
   },
   {
     "huisdier": "hond",
@@ -394,8 +395,8 @@
     "zuivelproduct": "Kaas",
     "kledingKleur": "Blauw, Zwart, Wit, Grijs",
     "verdiepingTTH": "Niet",
-    "beroep": "",
-    "beroepJong": "",
+    "beroep": null,
+    "beroepJong": null,
     "kaasZoogdier": "Wat.",
     "autoMerk": "Tesla"
   },
@@ -404,7 +405,7 @@
     "oogkleur": "Groen - Grijs",
     "windrichting": "Zuid",
     "zinSchaal": 8,
-    "eigenKeuze": "",
+    "eigenKeuze": null,
     "favoDatumDate": "21/10/1965",
     "favoDatumText": "eenentwintig oktober negentienvijfenzestig",
     "zuivelproduct": "Kaas",
@@ -417,7 +418,7 @@
   },
   {
     "huisdier": "Hond",
-    "oogkleur": "groen-grijs",
+    "oogkleur": "Groen-grijs",
     "windrichting": "Zuid",
     "zinSchaal": 8,
     "eigenKeuze": "Oké",
