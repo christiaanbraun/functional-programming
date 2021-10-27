@@ -1,10 +1,22 @@
 let array = [];
+let main = document.querySelector('main');
 
-fetch('data.json')
-  .then((response) => response.json())
-  .then((data) => {
-    for (let i = 0; i < data.length; i++) {
-      array.push(data[i]['Wat is je favoriete soort huisdier?'].toLowerCase());
-      console.log(array[i]);
-    }
-  });
+function fetchData(url) {
+  fetch(url)
+    .then((response) => response.json())
+    .then((data) => {
+      for (let i = 0; i < data.length; i++) {
+        array.push(
+          data[i]['Wat is je favoriete soort huisdier?']
+            .toLowerCase()
+            .replaceAll(' ', '')
+        );
+        main.insertAdjacentHTML(
+          'afterend',
+          `<img src="./resources/${array[i]}.jpg"></img>`
+        );
+      }
+    });
+}
+
+fetchData('./data.json');
