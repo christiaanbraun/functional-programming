@@ -67,14 +67,25 @@ function logMultipleWinners(winners) {
 	return multiplePrizeWinners
 }
 
-function getInfo(winners) {
+function displayInfo(winners) {
+	const node = document.querySelector('main')
+	console.log(winners)
 	winners.forEach(winner => {
-		fetch(`http://api.nobelprize.org/2.0/laureates?name=${winner.name}`)
-			.then(response => response.json())
-			.then(data => console.log(data))
+		node.insertAdjacentHTML(
+			'afterend',
+			`<p>${winner.name} won ${winner.amount} Nobel prizes</p>`
+		)
 	})
-	return winners
 }
+
+// function getInfo(winners) {
+// 	winners.forEach(winner => {
+// 		fetch(`http://api.nobelprize.org/2.0/laureates?name=${winner.name}`)
+// 			.then(response => response.json())
+// 			.then(data => console.log(data))
+// 	})
+// 	return winners
+// }
 
 fetch(
 	'http://api.nobelprize.org/2.0/nobelPrizes?limit=5000nobelPrizeYear=1901&yearTo=2020'
@@ -83,7 +94,7 @@ fetch(
 	.then(data => pushWinnersIntoArray(data))
 	.then(data => countWins(data))
 	.then(data => logMultipleWinners(data))
-	.then(data => getInfo(data))
+	.then(data => displayInfo(data))
 	.then(data => console.log(data))
 
 // Eerst deed ik dit maar dat was omslachtig
