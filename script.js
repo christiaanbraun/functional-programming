@@ -38,20 +38,52 @@ function pushWinnersIntoArray(input) {
 	return winnerNames
 }
 
-function countWinners(winners) {
-	const counts = {}
+function countWins(winners) {
+	// Create an empty object
+	let counts = {}
+	// For each Nobel Prize winner do this
 	winners.forEach(winner => {
+		// Add one to the counst of each winner for everytime it finds one
 		counts[winner] = (counts[winner] || 0) + 1
 	})
+	// Return the object
+	console.log(counts)
 	return counts
 }
 
+function logMultipleWinners(winners) {
+	// Create an array
+	let multiplePrizeWinners = []
+	// For every value and key in the object
+	for (let [key, value] of Object.entries(winners)) {
+		// If the value is more than one, push it into the multiplePrizeWinners array
+		if ([value] > 1) {
+			multiplePrizeWinners.push({
+				name: key,
+				amount: value,
+			})
+		}
+	}
+	return multiplePrizeWinners
+}
+
+function getInfo(winners) {
+	winners.forEach(winner => {
+		fetch(`http://api.nobelprize.org/2.0/laureates?name=${winner.name}`)
+			.then(response => response.json())
+			.then(data => console.log(data))
+	})
+	return winners
+}
+
 fetch(
-	'http://api.nobelprize.org/2.0/nobelPrizes?limit=5000nobelPrizeYear=1901&yearTo=1903'
+	'http://api.nobelprize.org/2.0/nobelPrizes?limit=5000nobelPrizeYear=1901&yearTo=2020'
 )
 	.then(response => response.json())
 	.then(data => pushWinnersIntoArray(data))
-	.then(data => countWinners(data))
+	.then(data => countWins(data))
+	.then(data => logMultipleWinners(data))
+	.then(data => getInfo(data))
 	.then(data => console.log(data))
 
 // Eerst deed ik dit maar dat was omslachtig
