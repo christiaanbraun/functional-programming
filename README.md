@@ -37,7 +37,7 @@ To clone and run this project, you need [Git](https://git-scm.com/) installed on
     Use `python -m SimpleHTTPServer 8000` to serve the current folder locally
 
     # Go to page
-    Go to http://localhost:8000/ in the browser and
+    Go to http://localhost:8000/ in the browser and check it out
 
 
 ```
